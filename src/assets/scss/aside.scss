@@ -1,0 +1,27 @@
+.el-aside {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0.6rem;
+  height: 100%;
+  padding-top: .2rem;
+  .el-menu {
+    border: none;
+  }
+  .el-menu-item {
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+    position: relative;
+    height: .4rem;
+    line-height: .4rem;
+  }
+
+  .el-menu-item.is-active {
+    background-color: #F2F3F7;
+    font-weight: 700;
+    border-right: 2px solid #3080FE;
+  }
+}

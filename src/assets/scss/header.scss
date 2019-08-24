@@ -1,0 +1,68 @@
+.el-header {
+  background-color: $color;
+  color: #fff;
+  text-align: center;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  h1 {
+    font-size: 20px;
+    a {
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    height: .4rem;
+    padding-top: .1rem;
+    .el-menu.el-menu--horizontal {
+      border: none;
+    }
+    .el-menu--horizontal>.el-menu-item {
+      height: .4rem;
+      line-height: .4rem;
+    }
+    .el-menu--horizontal>.el-menu-item.is-active {
+      border: none;
+    }
+    .el-menu--horizontal>.el-menu-item {
+      border-bottom: none;
+    }
+    .headinfo {
+      margin-left: .2rem;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      width: .89rem;
+      cursor: pointer;
+      img {
+        height: 100%;
+      }
+      .title {
+        text-align: center;
+        line-height: 18px;
+        margin-left: 5px;
+        & span:last-child {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.el-popover {
+  min-width: 60px;
+  text-align: center;
+  a {
+    display: block;
+    width: 100%;
+  }
+}

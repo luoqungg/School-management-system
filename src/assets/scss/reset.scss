@@ -1,0 +1,42 @@
+blockquote,body,button,dd,dl,dt,fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input, lengend, li, ol, p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 100px;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+a:hover {
+  color: #3e71f7;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+th {
+  font-weight: 400;
+}
+.clearFix::after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}

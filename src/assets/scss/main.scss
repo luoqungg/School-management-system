@@ -1,0 +1,396 @@
+.el-main {
+  background-color: #F2F2F2;
+  color: #333;
+  text-align: center;
+  padding-left: 2.4rem;
+  padding-top: .6rem;
+  padding-right: 0;
+  font-size: 14px;
+  height: 100%;
+
+  // 我的工作台组件
+  .dashboard {
+    padding: .2rem;
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      .box-card {
+        width: 2.9rem;
+        height: 1rem;
+        margin-bottom: 20px;
+        border: none;
+
+        &:nth-child(1) {
+          background-color: #EE706D;
+        }
+        &:nth-child(2) {
+          background-color: #F7DA47;
+        }
+        &:nth-child(3) {
+          background-color: #58CA9A;
+        }
+        &:nth-child(4n) {
+          background-color: #447EFF;
+        }
+        &:nth-child(5) {
+          background-color: #EE706D;
+        }
+        &:nth-child(6) {
+          background-color: #F7DA47;
+        }
+        &:nth-child(7) {
+          background-color: #58CA9A;
+        }
+
+        .content {
+          height: .6rem;
+          display: flex;
+          justify-content: center;
+          .imgbox {
+            width: .6rem;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            img {
+              width: .3rem;
+              margin-top: .15rem;
+            }
+          }
+          div {
+            &:last-child {
+              margin-left: .1rem;
+              p {
+                height: 50%;
+                line-height: .3rem;
+                text-align: left;
+                color: #fff;
+                &:first-child {
+                  font-weight: 800
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main {
+      h4 {
+        font-size: 16px;
+        text-align: left;
+      }
+      .person {
+        display: flex;
+        margin-top: .1rem;
+        div {
+          width: 25%;
+          height: .7rem;
+          p {
+            height: 50%;
+            font-size: 12px;
+            &:first-child {
+              font-size: 24px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 学生管理页面组件
+  .users {
+    padding: .2rem;
+    h4 {
+      text-align: left;
+      font-size: 16px;
+    }
+    .search {
+      margin-bottom: .2rem;
+      .el-form {
+        margin-top: .2rem;
+        display: flex;
+        flex-wrap: wrap;
+        .el-form-item {
+          width: 30%;
+          text-align: left;
+          margin-bottom: .1rem;
+          .el-form-item__content {
+            width: 2rem;
+          }
+        }
+      }
+    }
+
+    .student {
+      .button-student {
+        margin-top: .1rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .table-student {
+        width: 100%;
+        .el-table {
+          margin-top: .1rem;
+          th.gutter {
+            display: table-cell!important;
+          }
+          th {
+            background-color: #EBECF0;
+          }
+          tr.selected {
+            background: #F2F3F7;
+          }
+        }
+        .el-table--border td, .el-table--border th, .el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+          border-right: 1px solid #DCDEE3;
+        }
+        .el-table td, .el-table th.is-leaf {
+          border-bottom: 1px solid #DCDEE3;
+        }
+
+        .el-switch {
+          height: .25rem;
+          line-height: .25rem;
+        } 
+        .el-switch__core:after {
+          box-shadow: 0 0 2px #ccc;
+          width: .2rem !important;
+          height: .2rem !important;
+        }
+        .el-switch__core {
+          border-color: #ccc!important;
+          height: .25rem;
+          border-radius: 30px;
+        }
+
+        .el-switch.is-checked .el-switch__core::after {
+          margin-left: -21px;
+        }
+      }
+    }
+  }
+
+  // 试卷管理页面样式
+  .paper {
+    padding: .2rem;
+    h4 {
+      text-align: left;
+      font-size: 16px;
+    }
+    div {
+      &:first-child {
+        .specialty {
+          display: flex;
+          font-size: 16px;
+          span {
+            margin-top: .14rem;
+          }
+          li {
+            margin: 10px;
+            cursor: pointer;
+            padding: 0 .1rem;
+            height: .3rem;
+            border-radius: .15rem;
+            line-height: .3rem;
+          }
+          li.current {
+            background-color: #3080FE;
+            color: #fff;
+          }
+        }
+      }
+
+
+      &:last-child {
+        .paperlist {
+          margin-top: .2rem;
+          font-size: 14px;
+          ol {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            h5 {
+              text-align: left;
+              font-size: 14px;
+              font-weight: 400;
+            }
+            .content {
+              display: flex;
+              justify-content: space-between;
+              padding-left: 13px;
+              font-size: 13px;
+              color: #ccc;
+              margin: 10px 0;
+              .left {
+                span {
+                  margin-right: 10px;
+                }
+              }
+
+              .right {
+                i{
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .el-card {
+      margin-bottom: 20px;
+    }
+  }
+
+  // 添加学生
+  .add {
+    padding: .2rem;
+    position: relative;
+    h2 {
+      font-weight: 400;
+      text-align: left;
+      padding-bottom: .1rem;
+      border-bottom: 1px solid #eee;
+    }
+    .el-form {
+      width: 4rem;
+      margin-top: .2rem;
+      text-align: left;
+    }
+
+    .message {
+      width: 1rem;
+      height: .4rem;
+      background-color: #fff;
+      position: fixed;
+      left: 50%;
+      top: .3rem;
+      transform: translateX(-50%);
+      line-height: .4rem;
+      text-align: center;
+      color: #58CA9A;
+      border-radius: .1rem;
+      box-shadow: 0 0 2px rgba(0, 0,0, .4);
+      z-index: 10000000;
+    }
+    .message::after {
+      content: '提交成功';
+    }
+  }
+
+  //个人设置
+  .setting {
+    padding: .2rem;
+    h2 {
+      font-weight: 400;
+      text-align: left;
+      padding-bottom: .1rem;
+      border-bottom: 1px solid #eee;
+    }
+    .el-form {
+      width: 6rem;
+      margin-top: .2rem;
+      text-align: left;
+
+      .el-input {
+        width: 80%;
+      }
+      .el-switch {
+        height: .25rem;
+        line-height: .25rem;
+      } 
+      .el-switch__core:after {
+        box-shadow: 0 0 2px #ccc;
+        width: .2rem !important;
+        height: .2rem !important;
+      }
+      .el-switch__core {
+        border-color: #ccc!important;
+        height: .25rem;
+        border-radius: 30px;
+      }
+
+      .el-switch.is-checked .el-switch__core::after {
+        margin-left: -21px;
+      }
+
+      .el-upload-list--picture-card .el-upload-list__item {
+        width: 1rem;
+        height: 1rem;
+
+      }
+      .el-upload--picture-card {
+        width: 1rem;
+        height: 1rem;
+        line-height: 1rem;
+      }
+      .el-textarea {
+        height: 1rem;
+      }
+      .el-textarea__inner {
+        height: 100%;
+      }
+    }
+
+
+  }
+}
+
+// 消息框的样式
+.el-message-box {
+  width: 3rem;
+}
+.el-message-box__content {
+  position: relative;
+  padding: 10px 15px;
+  color: #606266;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+// 分页按钮的样式
+.page {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .2rem;
+
+  .jump {
+    &>span {
+      margin-top: 5px;
+      color: #ccc;
+      &:first-child {
+        margin-left: .2rem;
+      }
+    }
+    .el-input {
+      width: .4rem;
+    }
+    .el-button {
+      margin-left: 10px;
+    }
+  }
+}
+
+footer {
+  padding: 0 .2rem;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    a {
+      color: #ccc;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+  p {
+    color: #666;
+  }
+}
